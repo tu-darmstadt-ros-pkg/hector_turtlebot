@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+    - Base      : create
+    - Stacks    : circles
+    - 3d Sensor : kinect
+-->    
+<robot name="turtlebot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_library.urdf.xacro" />
+
+  <create/>
+  <stack_circles parent="base_link"/>
+  <!--<sensor_kinect  parent="base_link"/>-->
+  
+  <include filename="$(find hector_sensors_description)/urdf/hokuyo_utm30lx.urdf.xacro" />
+  
+  <xacro:hokuyo_utm30lx name="hokuyo_laser" parent="plate_2_link" ros_topic="hokuyo_scan" update_rate="40" ray_count="1040" min_angle="130" max_angle="-130">
+    <origin xyz="-0.115 0.0 0.06" rpy="0 0 0"/>
+  </xacro:hokuyo_utm30lx>
+</robot>
