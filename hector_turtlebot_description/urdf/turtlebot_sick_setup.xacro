@@ -17,4 +17,7 @@
   <xacro:hokuyo_utm30lx name="hokuyo_laser" parent="plate_2_link" ros_topic="hokuyo_scan" update_rate="40" ray_count="1040" min_angle="130" max_angle="-130">
     <origin xyz="-0.115 0.0 0.06" rpy="0 0 0"/>
   </xacro:hokuyo_utm30lx>
+<!--  <xacro:hokuyo_utm30lx name="hokuyo_laser" parent="base_link" ros_topic="hokuyo_scan" update_rate="40" ray_count="1040" min_angle="130" max_angle="-130">
+    <origin xyz="-0.115 0.0 0.26" rpy="0 0 0"/>
+  </xacro:hokuyo_utm30lx>-->
 </robot>

@@ -9,7 +9,7 @@
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="true"/>
     <arg name="debug" value="false"/>
-    <arg name="world_name" value="$(find turtlebot_gazebo)/worlds/empty.world"/>
+    <arg name="world_name" value="$(find hector_gazebo_worlds)/worlds/sick_robot_day_2014.world"/>
   </include>
   
   <include file="$(find turtlebot_gazebo)/launch/includes/roomba.launch.xml">
