@@ -2,6 +2,8 @@
 
 <launch>
   <node pkg="hector_turtlebot_scan_filter" type="hector_turtlebot_scan_filter" name="hokuyo_scan_filter" output="screen">
-    <rosparam file="$(find hector_turtlebot_scan_filter)/config/turtlebot.yaml" command="load"/>
+    <rosparam file="$(find hector_turtlebot_scan_filter)/config/default.yaml" command="load"/>
+    <remap from="scan" to="hokuyo_scan"/>
+    <remap from="scan_filtered" to="scan"/>
   </node>
 </launch>

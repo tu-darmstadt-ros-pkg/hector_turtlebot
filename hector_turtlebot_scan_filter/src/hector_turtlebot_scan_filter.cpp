@@ -39,8 +39,8 @@ public:
   {
     ros::NodeHandle nh;
 
-    scan_sub_ = nh.subscribe("hokuyo_scan", 1, &LaserScanFilter::scanCallback, this);
-    scan_filtered_pub_ = nh.advertise<sensor_msgs::LaserScan>("hokuyo_scan_filtered",1,false);
+    scan_sub_ = nh.subscribe("scan", 1, &LaserScanFilter::scanCallback, this);
+    scan_filtered_pub_ = nh.advertise<sensor_msgs::LaserScan>("scan_filtered",1,false);
 
     ros::NodeHandle pnh("~");
     XmlRpc::XmlRpcValue my_list;
