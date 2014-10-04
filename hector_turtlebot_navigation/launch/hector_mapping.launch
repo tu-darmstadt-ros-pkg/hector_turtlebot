@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!--
+This is taken from https://github.com/turtlebot/turtlebot_apps/blob/hydro/turtlebot_navigation/laser/laser_gmapping_demo.launch
+Only modification is use of our simple scan filter
+-->
+
+<launch>
+
+  <!-- Run self-filter -->
+  <!--<node name="laser_filter"  pkg="turtlebot_navigation" type="laser_footprint_filter" />-->
+  
+  <include file="$(find hector_turtlebot_scan_filter)/launch/scan_filter.launch" />
+ 
+  <!--- Run hector_mapping -->
+  <include file="$(find hector_turtlebot_navigation)/launch/includes/hector_mapping.launch.xml"/>
+
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+
+  <!--- Run Move Base and Robot Pose EKF -->
+  <!--<include file="$(find turtlebot_navigation)/laser/move_base_turtlebot_laser.launch" />-->
+
+</launch>
