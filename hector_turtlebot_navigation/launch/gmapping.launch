@@ -10,7 +10,7 @@ Only modification is use of our simple scan filter
   <!-- Run self-filter -->
   <!--<node name="laser_filter"  pkg="turtlebot_navigation" type="laser_footprint_filter" />-->
   
-  <include file="$(find hector_turtlebot_scan_filter)/launch/scan_filter.launch" />
+  <include file="$(find hector_turtlebot_scan_filter)/launch/scan_filter_sick_robot_day_2014.launch" />
  
   <!--- Run gmapping -->
   <include file="$(find hector_turtlebot_navigation)/launch/includes/gmapping.launch.xml"/>
