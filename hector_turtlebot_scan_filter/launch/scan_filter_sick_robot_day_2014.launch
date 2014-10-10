@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="hector_turtlebot_scan_filter" type="hector_turtlebot_scan_filter" name="hokuyo_scan_filter" output="screen">
+    <rosparam file="$(find hector_turtlebot_scan_filter)/config/sick_robot_day_2014_config.yaml" command="load"/>
+    <remap from="scan" to="hokuyo_scan"/>
+    <remap from="scan_filtered" to="scan"/>
+  </node>
+</launch>
