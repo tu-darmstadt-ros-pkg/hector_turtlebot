@@ -24,6 +24,8 @@
     <param name="temporalUpdate" value="-1.0"/>
     <param name="resampleThreshold" value="0.5"/>
     <param name="particles" value="1"/>
+     
+    
   <!--
     <param name="xmin" value="-50.0"/>
     <param name="ymin" value="-50.0"/>
@@ -33,10 +35,10 @@
   -->
     <param name="minimumScore" value="100"/>
   
-    <param name="xmin" value="-1.0"/>
-    <param name="ymin" value="-1.0"/>
-    <param name="xmax" value="1.0"/>
-    <param name="ymax" value="1.0"/>
+    <param name="xmin" value="-15.0"/>
+    <param name="ymin" value="-15.0"/>
+    <param name="xmax" value="15.0"/>
+    <param name="ymax" value="15.0"/>
 
     <param name="delta" value="0.05"/>
     <param name="llsamplerange" value="0.01"/>
@@ -45,4 +47,5 @@
     <param name="lasamplestep" value="0.005"/>
     <remap from="scan" to="$(arg scan_topic)"/>
   </node>
+   
 </launch>
